@@ -1,0 +1,18 @@
+{
+  "name": "pack-video-recorder",
+  "version": "1.0.0",
+  "description": "订单打包视频记录系统 - 记录打包前后视频",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js"
+  },
+  "keywords": ["video", "recorder", "packing", "order"],
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "fluent-ffmpeg": "^2.1.2",
+    "uuid": "^9.0.0",
+    "ws": "^8.14.2"
+  }
+}

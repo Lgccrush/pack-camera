@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>订单打包视频记录系统</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <!-- 头部 -->
+    <header class="header">
+      <h1>订单打包视频记录系统</h1>
+      <div class="status-indicator">
+        <span class="status-dot" id="statusDot"></span>
+        <span id="statusText">连接中...</span>
+      </div>
+    </header>
+
+    <!-- 摄像头预览区域 -->
+    <section class="section">
+      <h2>摄像头预览</h2>
+      <div class="camera-grid" id="cameraGrid">
+        <div class="camera-placeholder">
+          <p>正在检测摄像头...</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 调试控制区域 -->
+    <section class="section">
+      <h2>调试控制</h2>
+      <div class="control-panel">
+        <div class="input-group">
+          <label for="orderIdInput">订单号:</label>
+          <input type="text" id="orderIdInput" placeholder="输入订单号" />
+        </div>
+        <div class="button-group">
+          <button class="btn btn-primary" id="startPackBtn">开始打包</button>
+          <button class="btn btn-success" id="endPackBtn" disabled>结束打包</button>
+        </div>
+      </div>
+      <div class="message-area" id="messageArea"></div>
+    </section>
+
+    <!-- 活跃会话区域 -->
+    <section class="section">
+      <h2>活跃会话</h2>
+      <div class="session-list" id="activeSessionList">
+        <div class="empty-state">暂无活跃会话</div>
+      </div>
+    </section>
+
+    <!-- 已生成视频区域 -->
+    <section class="section">
+      <h2>已生成视频</h2>
+      <div class="video-list" id="videoList">
+        <div class="empty-state">暂无视频</div>
+      </div>
+    </section>
+
+    <!-- 视频播放弹窗 -->
+    <div class="modal" id="videoModal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 id="videoModalTitle">视频播放</h3>
+          <button class="modal-close" id="modalClose">&times;</button>
+        </div>
+        <div class="modal-body">
+          <video id="videoPlayer" controls></video>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

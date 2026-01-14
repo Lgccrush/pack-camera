@@ -1,0 +1,12 @@
+{
+  "port": 3000,
+  "bufferSeconds": 30,
+  "segmentDuration": 5,
+  "prePackSeconds": 10,
+  "postPackSeconds": 10,
+  "videoOutput": "./videos",
+  "tempDir": "./temp",
+  "videoWidth": 640,
+  "videoHeight": 480,
+  "frameRate": 25
+}
